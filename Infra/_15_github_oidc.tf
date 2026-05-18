@@ -55,7 +55,7 @@ resource "aws_iam_role" "github_actions" {
           }
 
           StringLike = {
-             "token.actions.githubusercontent.com:sub" = "repo:${var.github_org}/${var.github_repo}:${var.github_branch}" # "token.actions.githubusercontent.com:sub" = "repo:princewillopah/-Static-Site-Deployment:*"
+             "token.actions.githubusercontent.com:sub" = "repo:${var.github_org}/${var.github_repo}:*" # "token.actions.githubusercontent.com:sub" = "repo:princewillopah/-Static-Site-Deployment:*"
           }
         }
       }
