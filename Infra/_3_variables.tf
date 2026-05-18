@@ -25,3 +25,29 @@ variable "environment" {
   type        = string
   default     = "production"
 }
+
+variable "github_org" {
+  description = "Your GitHub username or organisation name"
+  type        = string
+}
+
+variable "github_repo" {
+  description = "Repository name (without the org prefix)"
+  type        = string
+}
+
+variable "github_branch" {
+  description = "Branch that is allowed to deploy"
+  type        = string
+  default     = "main"
+}
+
+# variable "s3_bucket_name" {
+#   description = "Name of the existing S3 bucket serving your static site"
+#   type        = string
+# }
+
+# variable "cloudfront_distribution_id" {
+#   description = "CloudFront distribution ID (e.g. E1A2B3C4D5E6F7)"
+#   type        = string
+# }
